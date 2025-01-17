@@ -16,16 +16,11 @@ function Search() {
 
   const [searchTerm , setSearchTerm] = React.useState('')
 
-  function handleInput(e) {
-    setSearchTerm(e.target.value)
-  }
-
-
 
   return(
     <>
       <label htmlFor="srch">Search:</label>
-      <input type="text" id='srch' onInput={handleInput}/>
+      <input type="text" id='srch' onInput={(e) => setSearchTerm(e.target.value)}/>
 
       <p>
         Searching for <strong>{searchTerm}</strong>.
